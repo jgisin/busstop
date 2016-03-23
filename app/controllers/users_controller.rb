@@ -22,7 +22,7 @@ class UsersController < ApplicationController
   end
 
   def new
-    geo = GeoLoc.new("73.78.33.1")
+    geo = GeoLoc.new(request.remote_ip.to_s)
     puts geo.run
     @user = User.new
     @user.latitude = geo.run[:lat].to_s
