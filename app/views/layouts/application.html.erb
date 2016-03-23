@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Challenge</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <%= link_to "Get 10 Nearest Bus Stops", new_user_path, class: 'btn btn-md btn-default' %>
+    <%= link_to "See All Stops", users_path, class: 'btn btn-md btn-primary' %>
+  </nav>
+<%= yield %>
+
+</body>
+</html>
